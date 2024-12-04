@@ -1,0 +1,85 @@
+{% extends "layouts/master.html" %}
+{% block content %}
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote-lite.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote-lite.min.js"></script>
+<style>
+    .note-editable {
+        text-align: left !important;
+    }
+
+    .note-codable {
+        direction: ltr !important;
+    }
+
+    .note-toolbar {
+        text-align: left;
+    }
+</style>
+<div id="wrapper" class="wrap overflow-hidden-x">
+    {% include "common/breadcrumb.html" %}
+    <article class="post type-post single-post py-4 lg:py-1 xl:py-3">
+        <div class="container max-w-xl">
+            <div class="post-header">
+                <div class="panel vstack gap-4 md:gap-6 xl:gap-8 text-center">
+                    <div class="card bg-transparent text-gray-900 dark:text-white border shadow">
+                        <div class="card-header">
+                            <h3>Blog Create</h3>
+                        </div>
+                        {% include "common/message.html" %}
+                        <form  method="post" enctype="multipart/form-data">
+                            <div class="card-body vstack gap-2">
+                            {% comment %} <h5 class="card-title">Card Title</h5> {% endcomment %}
+                            {% include "common/message.html" %}
+                                {% csrf_token %}
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <select name="category" id="category" class="form-control">
+                                            <option value="">Select Category</option>
+                                            {% for blog_category in blog_categories %}
+                                                <option value="{{blog_category.id}}">{{blog_category.name}}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input class="form-control"  name="title" type="text" placeholder="Title" required>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input class="form-control"  name="photo" type="file"  required>
+                                    </div>
+                                </div>
+                                <textarea class="form-control" name="summary" id="summary" placeholder="Summary" cols="10" rows="3"></textarea>
+                                <textarea class="form-control" name="description" id="summernote" placeholder="Description" cols="30" rows="5"></textarea>
+                                {% comment %} <div id="summernote"></div> {% endcomment %}
+                            </div>
+                            <div class="card-footer text-muted">
+                                <button class="btn btn-primary btn-sm mt-1" type="submit">Create Blog</button>
+                            </div>
+                        </form>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</div>
+<script>
+    $('#summernote').summernote({
+        //placeholder: 'Hello stand alone ui',
+        tabsize: 2,
+        height: 120,
+        focus:true,
+        toolbar: [
+          ['style', ['style']],
+          ['font', ['bold', 'underline', 'clear']],
+          ['color', ['color']],
+          ['para', ['ul', 'ol', 'paragraph']],
+          ['table', ['table']],
+          ['insert', ['link', 'picture', 'video']],
+          ['view', ['fullscreen', 'codeview', 'help']]
+        ]
+      });
+    $('#summernote').on('summernote.init', function() {
+        $('#summernote').summernote('focus');
+    });
+</script>
+{% endblock %}

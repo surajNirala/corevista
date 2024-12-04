@@ -1,0 +1,886 @@
+<header class="uc-header header-three uc-navbar-sticky-wrap z-999" data-uc-sticky="sel-target: .uc-navbar-container; cls-active: uc-navbar-sticky; cls-inactive: uc-navbar-transparent; end: !*;">
+    <nav class="uc-navbar-container fs-6 z-1">
+        <div class="uc-top-navbar panel z-3 min-h-32px lg:min-h-48px mx-2 rounded-bottom overflow-hidden bg-gray-800 text-white uc-dark d-none md:d-block" data-uc-navbar=" animation: uc-animation-slide-top-small; duration: 150;">
+            <div class="position-cover blend-color" data-src="/assets/images/demo-three/topbar-abstract.jpg" data-uc-img></div>
+            <div class="container max-w-xl">
+                <div class="hstack panel z-1">
+                    <div class="uc-navbar-left gap-2 lg:gap-3">
+                        <div class="trending-ticker panel swiper-parent max-w-600px">
+                            <div class="swiper hstack gap-1 min-h-40px" data-uc-swiper="items: 1; autoplay: 3000; parallax: true; pause-mouse: false; reverse: false; prev: .swiper-prev; next: .swiper-next; effect: fade; fade: true;">
+                                <div class="hstack gap-narrow">
+                                    <i class="icon-1 unicon-fire text-warning"></i>
+                                    <span class="fs-6 fw-bold dark:text-white">Trending:</span>
+                                </div>
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <article class="post type-post">
+                                            <h6 class="post-title fs-6 ft-primary fw-medium m-0 opacity-75 dark:text-white" data-swiper-parallax-y="-24">
+                                                <a class="text-none" href="{% url 'blog_details' %}">The Rise of AI-Powered Personal Assistants: How They Manage</a>
+                                            </h6>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="post type-post">
+                                            <h6 class="post-title fs-6 ft-primary fw-medium m-0 opacity-75 dark:text-white" data-swiper-parallax-y="-24">
+                                                <a class="text-none" href="{% url 'blog_details' %}">Tech Innovations Reshaping the Retail Landscape: AI Payments</a>
+                                            </h6>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="post type-post">
+                                            <h6 class="post-title fs-6 ft-primary fw-medium m-0 opacity-75 dark:text-white" data-swiper-parallax-y="-24">
+                                                <a class="text-none" href="{% url 'blog_details' %}">Balancing Work and Wellness: Tech Solutions for Healthy</a>
+                                            </h6>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="post type-post">
+                                            <h6 class="post-title fs-6 ft-primary fw-medium m-0 opacity-75 dark:text-white" data-swiper-parallax-y="-24">
+                                                <a class="text-none" href="{% url 'blog_details' %}">The Importance of Sleep: Tips for Better Rest and Recovery</a>
+                                            </h6>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="post type-post">
+                                            <h6 class="post-title fs-6 ft-primary fw-medium m-0 opacity-75 dark:text-white" data-swiper-parallax-y="-24">
+                                                <a class="text-none" href="{% url 'blog_details' %}">The Future of Sustainable Living: Driving Eco-Friendly Lifestyles</a>
+                                            </h6>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="post type-post">
+                                            <h6 class="post-title fs-6 ft-primary fw-medium m-0 opacity-75 dark:text-white" data-swiper-parallax-y="-24">
+                                                <a class="text-none" href="{% url 'blog_details' %}">Business Agility the Digital Age: Leveraging AI and Automation</a>
+                                            </h6>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uc-navbar-right gap-2 lg:gap-3">
+                        <div class="uc-navbar-item">
+                            <ul class="uc-social-header nav-x gap-1 d-none lg:d-flex dark:text-white">
+                                <li>
+                                    <a href="#tw" class="w-32px h-32px cstack border rounded-circle hover:bg-primary transition-colors duration-200"><i class="icon icon-1 unicon-logo-facebook"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#in" class="w-32px h-32px cstack border rounded-circle hover:bg-primary transition-colors duration-200"><i class="icon icon-1 unicon-logo-x"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#yt" class="w-32px h-32px cstack border rounded-circle hover:bg-primary transition-colors duration-200"><i class="icon icon-1 unicon-logo-instagram"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="uc-navbar-item">
+                            <a class="uc-account-trigger btn btn-sm border-0 p-0 duration-0 dark:text-white" href="#uc-newsletter-modal" data-uc-toggle>
+                                <i class="icon icon-2 fw-medium unicon-email"></i>
+                            </a>
+                        </div>
+                        <div class="uc-navbar-item">
+                            <a class="uc-search-trigger icon-2 cstack text-none text-dark dark:text-white" href="#uc-search-modal" data-uc-toggle>
+                                <i class="icon icon-2 fw-bold unicon-search"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="uc-center-navbar panel z-2">
+            <div class="container max-w-xl">
+                <div class="uc-navbar min-h-72px lg:min-h-80px text-gray-900 dark:text-white" data-uc-navbar=" animation: uc-animation-slide-top-small; duration: 150;">
+                    <div class="uc-navbar-left">
+                        <div class="d-block lg:d-none">
+                            <a class="uc-menu-trigger" href="#uc-menu-panel" data-uc-toggle></a>
+                        </div>
+                        <div class="uc-logo d-none md:d-block text-dark dark:text-white">
+                            <a href="/">
+                                <img class="w-80px text-dark dark:text-white" src="https://html.themewant.com/news5/assets/images/demo-three/common/logo.svg" alt="News5" data-uc-svg>
+                            </a>
+                        </div>
+                        <ul class="uc-navbar-nav gap-3 ft-tertiary fs-5 fw-medium ms-4 d-none lg:d-flex" style="--uc-nav-height: 80px">
+                            <li>
+                                <a href="#">Latest <span data-uc-navbar-parent-icon></span></a>
+                                <div class="uc-navbar-dropdown ft-primary text-unset p-3 pb-4 hide-scrollbar" data-uc-drop=" offset: 0; boundary: !.uc-navbar; stretch: x; animation: uc-animation-slide-top-small; duration: 150;">
+                                    <div class="row child-cols col-match g-3">
+                                        <div class="col-2">
+                                            <div class="uc-navbar-switcher-nav p-1 rounded bg-gray-25 dark:bg-gray-800">
+                                                <ul class="uc-tab-left fs-5 text-end" data-uc-tab="connect: #uc-navbar-switcher-tending; animation: uc-animation-slide-right-small, uc-animation-slide-left-small">
+                                                    <li><a href="#">News</a></li>
+                                                    <li><a href="#">Gadgets</a></li>
+                                                    <li><a href="#">Tech</a></li>
+                                                    <li><a href="#">Science</a></li>
+                                                    <li><a href="#">AI</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-10">
+                                            <div id="uc-navbar-switcher-tending" class="uc-navbar-switcher uc-switcher">
+                                                <div class="row child-cols col-match g-2">
+                                                    <div>
+                                                        <article class="post type-post panel vstack gap-1">
+                                                            <div class="post-media panel overflow-hidden">
+                                                                <div class="featured-image bg-gray-25 dark:bg-gray-800 ratio ratio-16x9">
+                                                                    <img class="media-cover image" src="/assets/images/common/img-fallback.png" data-src="{{MEDIA_URL}}assets/images/demo-three/posts/img-06.jpg" alt="Business Agility the Digital Age: Leveraging AI and Automation" data-uc-img="loading: lazy">
+                                                                </div>
+                                                                <a href="{% url 'blog_details' %}" class="position-cover"></a>
+                                                            </div>
+                                                            <div class="post-header panel vstack gap-narrow">
+                                                                <div class="post-meta panel hstack justify-start gap-1 fs-7 ft-tertiary fw-medium text-gray-900 dark:text-white text-opacity-60 d-none md:d-flex z-1">
+                                                                    <div>
+                                                                        <div class="post-category hstack gap-narrow fw-semibold">
+                                                                            <a class="fw-medium text-none text-primary dark:text-primary-400" href="{% url 'blog_category' %}">Tech</a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="sep d-none md:d-block">|</div>
+                                                                    <div class="d-none md:d-block">
+                                                                        <div class="post-date hstack gap-narrow">
+                                                                            <span>7d ago</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <h3 class="post-title h6 m-0 text-truncate-2">
+                                                                    <a class="text-none hover:text-primary duration-150" href="{% url 'blog_details' %}">Business Agility the Digital Age: Leveraging AI and Automation</a>
+                                                                </h3>
+                                                            </div>
+                                                        </article>
+                                                    </div>
+                                                    <div>
+                                                        <article class="post type-post panel vstack gap-1">
+                                                            <div class="post-media panel overflow-hidden">
+                                                                <div class="featured-image bg-gray-25 dark:bg-gray-800 ratio ratio-16x9">
+                                                                    <img class="media-cover image" src="/assets/images/common/img-fallback.png" data-src="{{MEDIA_URL}}assets/images/demo-three/posts/img-07.jpg" alt="The Art of Baking: From Classic Bread to Artisan Pastries" data-uc-img="loading: lazy">
+                                                                </div>
+                                                                <a href="{% url 'blog_details' %}" class="position-cover"></a>
+                                                            </div>
+                                                            <div class="post-header panel vstack gap-narrow">
+                                                                <div class="post-meta panel hstack justify-start gap-1 fs-7 ft-tertiary fw-medium text-gray-900 dark:text-white text-opacity-60 d-none md:d-flex z-1">
+                                                                    <div>
+                                                                        <div class="post-category hstack gap-narrow fw-semibold">
+                                                                            <a class="fw-medium text-none text-primary dark:text-primary-400" href="{% url 'blog_category' %}">Network</a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="sep d-none md:d-block">|</div>
+                                                                    <div class="d-none md:d-block">
+                                                                        <div class="post-date hstack gap-narrow">
+                                                                            <span>9d ago</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <h3 class="post-title h6 m-0 text-truncate-2">
+                                                                    <a class="text-none hover:text-primary duration-150" href="{% url 'blog_details' %}">The Art of Baking: From Classic Bread to Artisan Pastries</a>
+                                                                </h3>
+                                                            </div>
+                                                        </article>
+                                                    </div>
+                                                    <div>
+                                                        <article class="post type-post panel vstack gap-1">
+                                                            <div class="post-media panel overflow-hidden">
+                                                                <div class="featured-image bg-gray-25 dark:bg-gray-800 ratio ratio-16x9">
+                                                                    <img class="media-cover image" src="/assets/images/common/img-fallback.png" data-src="{{MEDIA_URL}}assets/images/demo-three/posts/img-08.jpg" alt="AI and Marketing: Unlocking Customer Insights" data-uc-img="loading: lazy">
+                                                                </div>
+                                                                <a href="{% url 'blog_details' %}" class="position-cover"></a>
+                                                            </div>
+                                                            <div class="post-header panel vstack gap-narrow">
+                                                                <div class="post-meta panel hstack justify-start gap-1 fs-7 ft-tertiary fw-medium text-gray-900 dark:text-white text-opacity-60 d-none md:d-flex z-1">
+                                                                    <div>
+                                                                        <div class="post-category hstack gap-narrow fw-semibold">
+                                                                            <a class="fw-medium text-none text-primary dark:text-primary-400" href="{% url 'blog_category' %}">Virtual Reality</a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="sep d-none md:d-block">|</div>
+                                                                    <div class="d-none md:d-block">
+                                                                        <div class="post-date hstack gap-narrow">
+                                                                            <span>15d ago</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <h3 class="post-title h6 m-0 text-truncate-2">
+                                                                    <a class="text-none hover:text-primary duration-150" href="{% url 'blog_details' %}">AI and Marketing: Unlocking Customer Insights</a>
+                                                                </h3>
+                                                            </div>
+                                                        </article>
+                                                    </div>
+                                                    <div>
+                                                        <article class="post type-post panel vstack gap-1">
+                                                            <div class="post-media panel overflow-hidden">
+                                                                <div class="featured-image bg-gray-25 dark:bg-gray-800 ratio ratio-16x9">
+                                                                    <img class="media-cover image" src="/assets/images/common/img-fallback.png" data-src="{{MEDIA_URL}}assets/images/demo-three/posts/img-09.jpg" alt="Hidden Gems: Underrated Travel Destinations Around the World" data-uc-img="loading: lazy">
+                                                                </div>
+                                                                <a href="{% url 'blog_details' %}" class="position-cover"></a>
+                                                            </div>
+                                                            <div class="post-header panel vstack gap-narrow">
+                                                                <div class="post-meta panel hstack justify-start gap-1 fs-7 ft-tertiary fw-medium text-gray-900 dark:text-white text-opacity-60 d-none md:d-flex z-1">
+                                                                    <div>
+                                                                        <div class="post-category hstack gap-narrow fw-semibold">
+                                                                            <a class="fw-medium text-none text-primary dark:text-primary-400" href="{% url 'blog_category' %}">AI Powered</a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="sep d-none md:d-block">|</div>
+                                                                    <div class="d-none md:d-block">
+                                                                        <div class="post-date hstack gap-narrow">
+                                                                            <span>23d ago</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <h3 class="post-title h6 m-0 text-truncate-2">
+                                                                    <a class="text-none hover:text-primary duration-150" href="{% url 'blog_details' %}">Hidden Gems: Underrated Travel Destinations Around the World</a>
+                                                                </h3>
+                                                            </div>
+                                                        </article>
+                                                    </div>
+                                                </div>
+                                                <div class="row child-cols g-2">
+                                                    <div>
+                                                        <article class="post type-post panel vstack gap-1">
+                                                            <div class="post-media panel overflow-hidden">
+                                                                <div class="featured-image bg-gray-25 dark:bg-gray-800 ratio ratio-16x9">
+                                                                    <img class="media-cover image" src="/assets/images/common/img-fallback.png" data-src="{{MEDIA_URL}}assets/images/demo-three/posts/img-01.jpg" alt="The Rise of AI-Powered Personal Assistants: How They Manage" data-uc-img="loading: lazy">
+                                                                </div>
+                                                                <a href="{% url 'blog_details' %}" class="position-cover"></a>
+                                                            </div>
+                                                            <div class="post-header panel vstack gap-narrow">
+                                                                <div class="post-meta panel hstack justify-start gap-1 fs-7 ft-tertiary fw-medium text-gray-900 dark:text-white text-opacity-60 d-none md:d-flex z-1">
+                                                                    <div>
+                                                                        <div class="post-category hstack gap-narrow fw-semibold">
+                                                                            <a class="fw-medium text-none text-primary dark:text-primary-400" href="{% url 'blog_category' %}">Gadgets</a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="sep d-none md:d-block">|</div>
+                                                                    <div class="d-none md:d-block">
+                                                                        <div class="post-date hstack gap-narrow">
+                                                                            <span>1min ago</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <h3 class="post-title h6 m-0 text-truncate-2">
+                                                                    <a class="text-none hover:text-primary duration-150" href="{% url 'blog_details' %}">The Rise of AI-Powered Personal Assistants: How They Manage</a>
+                                                                </h3>
+                                                            </div>
+                                                        </article>
+                                                    </div>
+                                                    <div>
+                                                        <article class="post type-post panel vstack gap-1">
+                                                            <div class="post-media panel overflow-hidden">
+                                                                <div class="featured-image bg-gray-25 dark:bg-gray-800 ratio ratio-16x9">
+                                                                    <img class="media-cover image" src="/assets/images/common/img-fallback.png" data-src="{{MEDIA_URL}}assets/images/demo-three/posts/img-02.jpg" alt="Tech Innovations Reshaping the Retail Landscape: AI Payments" data-uc-img="loading: lazy">
+                                                                </div>
+                                                                <a href="{% url 'blog_details' %}" class="position-cover"></a>
+                                                            </div>
+                                                            <div class="post-header panel vstack gap-narrow">
+                                                                <div class="post-meta panel hstack justify-start gap-1 fs-7 ft-tertiary fw-medium text-gray-900 dark:text-white text-opacity-60 d-none md:d-flex z-1">
+                                                                    <div>
+                                                                        <div class="post-category hstack gap-narrow fw-semibold">
+                                                                            <a class="fw-medium text-none text-primary dark:text-primary-400" href="{% url 'blog_category' %}">Startups</a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="sep d-none md:d-block">|</div>
+                                                                    <div class="d-none md:d-block">
+                                                                        <div class="post-date hstack gap-narrow">
+                                                                            <span>55min ago</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <h3 class="post-title h6 m-0 text-truncate-2">
+                                                                    <a class="text-none hover:text-primary duration-150" href="{% url 'blog_details' %}">Tech Innovations Reshaping the Retail Landscape: AI Payments</a>
+                                                                </h3>
+                                                            </div>
+                                                        </article>
+                                                    </div>
+                                                    <div>
+                                                        <article class="post type-post panel vstack gap-1">
+                                                            <div class="post-media panel overflow-hidden">
+                                                                <div class="featured-image bg-gray-25 dark:bg-gray-800 ratio ratio-16x9">
+                                                                    <img class="media-cover image" src="/assets/images/common/img-fallback.png" data-src="{{MEDIA_URL}}assets/images/demo-three/posts/img-03.jpg" alt="Balancing Work and Wellness: Tech Solutions for Healthy" data-uc-img="loading: lazy">
+                                                                </div>
+                                                                <a href="{% url 'blog_details' %}" class="position-cover"></a>
+                                                            </div>
+                                                            <div class="post-header panel vstack gap-narrow">
+                                                                <div class="post-meta panel hstack justify-start gap-1 fs-7 ft-tertiary fw-medium text-gray-900 dark:text-white text-opacity-60 d-none md:d-flex z-1">
+                                                                    <div>
+                                                                        <div class="post-category hstack gap-narrow fw-semibold">
+                                                                            <a class="fw-medium text-none text-primary dark:text-primary-400" href="{% url 'blog_category' %}">Gadgets</a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="sep d-none md:d-block">|</div>
+                                                                    <div class="d-none md:d-block">
+                                                                        <div class="post-date hstack gap-narrow">
+                                                                            <span>1h ago</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <h3 class="post-title h6 m-0 text-truncate-2">
+                                                                    <a class="text-none hover:text-primary duration-150" href="{% url 'blog_details' %}">Balancing Work and Wellness: Tech Solutions for Healthy</a>
+                                                                </h3>
+                                                            </div>
+                                                        </article>
+                                                    </div>
+                                                    <div>
+                                                        <article class="post type-post panel vstack gap-1">
+                                                            <div class="post-media panel overflow-hidden">
+                                                                <div class="featured-image bg-gray-25 dark:bg-gray-800 ratio ratio-16x9">
+                                                                    <img class="media-cover image" src="/assets/images/common/img-fallback.png" data-src="{{MEDIA_URL}}assets/images/demo-three/posts/img-04.jpg" alt="The Importance of Sleep: Tips for Better Rest and Recovery" data-uc-img="loading: lazy">
+                                                                </div>
+                                                                <a href="{% url 'blog_details' %}" class="position-cover"></a>
+                                                            </div>
+                                                            <div class="post-header panel vstack gap-narrow">
+                                                                <div class="post-meta panel hstack justify-start gap-1 fs-7 ft-tertiary fw-medium text-gray-900 dark:text-white text-opacity-60 d-none md:d-flex z-1">
+                                                                    <div>
+                                                                        <div class="post-category hstack gap-narrow fw-semibold">
+                                                                            <a class="fw-medium text-none text-primary dark:text-primary-400" href="{% url 'blog_category' %}">AI Powered</a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="sep d-none md:d-block">|</div>
+                                                                    <div class="d-none md:d-block">
+                                                                        <div class="post-date hstack gap-narrow">
+                                                                            <span>2h ago</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <h3 class="post-title h6 m-0 text-truncate-2">
+                                                                    <a class="text-none hover:text-primary duration-150" href="{% url 'blog_details' %}">The Importance of Sleep: Tips for Better Rest and Recovery</a>
+                                                                </h3>
+                                                            </div>
+                                                        </article>
+                                                    </div>
+                                                </div>
+                                                <div class="row child-cols g-2">
+                                                    <div>
+                                                        <article class="post type-post panel vstack gap-1">
+                                                            <div class="post-media panel overflow-hidden">
+                                                                <div class="featured-image bg-gray-25 dark:bg-gray-800 ratio ratio-16x9">
+                                                                    <img class="media-cover image" src="/assets/images/common/img-fallback.png" data-src="{{MEDIA_URL}}assets/images/demo-three/posts/img-11.jpg" alt="Solo Travel: Some Tips and Destinations for the Adventurous Explorer" data-uc-img="loading: lazy">
+                                                                </div>
+                                                                <a href="{% url 'blog_details' %}" class="position-cover"></a>
+                                                            </div>
+                                                            <div class="post-header panel vstack gap-narrow">
+                                                                <div class="post-meta panel hstack justify-start gap-1 fs-7 ft-tertiary fw-medium text-gray-900 dark:text-white text-opacity-60 d-none md:d-flex z-1">
+                                                                    <div>
+                                                                        <div class="post-category hstack gap-narrow fw-semibold">
+                                                                            <a class="fw-medium text-none text-primary dark:text-primary-400" href="{% url 'blog_category' %}">Travel</a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="sep d-none md:d-block">|</div>
+                                                                    <div class="d-none md:d-block">
+                                                                        <div class="post-date hstack gap-narrow">
+                                                                            <span>2mo ago</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <h3 class="post-title h6 m-0 text-truncate-2">
+                                                                    <a class="text-none hover:text-primary duration-150" href="{% url 'blog_details' %}">Solo Travel: Some Tips and Destinations for the Adventurous Explorer</a>
+                                                                </h3>
+                                                            </div>
+                                                        </article>
+                                                    </div>
+                                                    <div>
+                                                        <article class="post type-post panel vstack gap-1">
+                                                            <div class="post-media panel overflow-hidden">
+                                                                <div class="featured-image bg-gray-25 dark:bg-gray-800 ratio ratio-16x9">
+                                                                    <img class="media-cover image" src="/assets/images/common/img-fallback.png" data-src="{{MEDIA_URL}}assets/images/demo-three/posts/img-12.jpg" alt="AI-Powered Financial Planning: How Algorithms Revolutionizing" data-uc-img="loading: lazy">
+                                                                </div>
+                                                                <a href="{% url 'blog_details' %}" class="position-cover"></a>
+                                                            </div>
+                                                            <div class="post-header panel vstack gap-narrow">
+                                                                <div class="post-meta panel hstack justify-start gap-1 fs-7 ft-tertiary fw-medium text-gray-900 dark:text-white text-opacity-60 d-none md:d-flex z-1">
+                                                                    <div>
+                                                                        <div class="post-category hstack gap-narrow fw-semibold">
+                                                                            <a class="fw-medium text-none text-primary dark:text-primary-400" href="{% url 'blog_category' %}">Tech</a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="sep d-none md:d-block">|</div>
+                                                                    <div class="d-none md:d-block">
+                                                                        <div class="post-date hstack gap-narrow">
+                                                                            <span>2mo ago</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <h3 class="post-title h6 m-0 text-truncate-2">
+                                                                    <a class="text-none hover:text-primary duration-150" href="{% url 'blog_details' %}">AI-Powered Financial Planning: How Algorithms Revolutionizing</a>
+                                                                </h3>
+                                                            </div>
+                                                        </article>
+                                                    </div>
+                                                    <div>
+                                                        <article class="post type-post panel vstack gap-1">
+                                                            <div class="post-media panel overflow-hidden">
+                                                                <div class="featured-image bg-gray-25 dark:bg-gray-800 ratio ratio-16x9">
+                                                                    <img class="media-cover image" src="/assets/images/common/img-fallback.png" data-src="{{MEDIA_URL}}assets/images/demo-three/posts/img-13.jpg" alt="Tech Tools for your Time Management: Enhancing Productivity" data-uc-img="loading: lazy">
+                                                                </div>
+                                                                <a href="{% url 'blog_details' %}" class="position-cover"></a>
+                                                            </div>
+                                                            <div class="post-header panel vstack gap-narrow">
+                                                                <div class="post-meta panel hstack justify-start gap-1 fs-7 ft-tertiary fw-medium text-gray-900 dark:text-white text-opacity-60 d-none md:d-flex z-1">
+                                                                    <div>
+                                                                        <div class="post-category hstack gap-narrow fw-semibold">
+                                                                            <a class="fw-medium text-none text-primary dark:text-primary-400" href="{% url 'blog_category' %}">Startups</a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="sep d-none md:d-block">|</div>
+                                                                    <div class="d-none md:d-block">
+                                                                        <div class="post-date hstack gap-narrow">
+                                                                            <span>3mo ago</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <h3 class="post-title h6 m-0 text-truncate-2">
+                                                                    <a class="text-none hover:text-primary duration-150" href="{% url 'blog_details' %}">Tech Tools for your Time Management: Enhancing Productivity</a>
+                                                                </h3>
+                                                            </div>
+                                                        </article>
+                                                    </div>
+                                                    <div>
+                                                        <article class="post type-post panel vstack gap-1">
+                                                            <div class="post-media panel overflow-hidden">
+                                                                <div class="featured-image bg-gray-25 dark:bg-gray-800 ratio ratio-16x9">
+                                                                    <img class="media-cover image" src="/assets/images/common/img-fallback.png" data-src="{{MEDIA_URL}}assets/images/demo-three/posts/img-14.jpg" alt="A Guide to The Rise of Gourmet Street Food: Trends and Top Picks" data-uc-img="loading: lazy">
+                                                                </div>
+                                                                <a href="{% url 'blog_details' %}" class="position-cover"></a>
+                                                            </div>
+                                                            <div class="post-header panel vstack gap-narrow">
+                                                                <div class="post-meta panel hstack justify-start gap-1 fs-7 ft-tertiary fw-medium text-gray-900 dark:text-white text-opacity-60 d-none md:d-flex z-1">
+                                                                    <div>
+                                                                        <div class="post-category hstack gap-narrow fw-semibold">
+                                                                            <a class="fw-medium text-none text-primary dark:text-primary-400" href="{% url 'blog_category' %}">AI Powered</a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="sep d-none md:d-block">|</div>
+                                                                    <div class="d-none md:d-block">
+                                                                        <div class="post-date hstack gap-narrow">
+                                                                            <span>6mo ago</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <h3 class="post-title h6 m-0 text-truncate-2">
+                                                                    <a class="text-none hover:text-primary duration-150" href="{% url 'blog_details' %}">A Guide to The Rise of Gourmet Street Food: Trends and Top Picks</a>
+                                                                </h3>
+                                                            </div>
+                                                        </article>
+                                                    </div>
+                                                </div>
+                                                <div class="row child-cols g-2">
+                                                    <div>
+                                                        <article class="post type-post panel vstack gap-1">
+                                                            <div class="post-media panel overflow-hidden">
+                                                                <div class="featured-image bg-gray-25 dark:bg-gray-800 ratio ratio-16x9">
+                                                                    <img class="media-cover image" src="/assets/images/common/img-fallback.png" data-src="{{MEDIA_URL}}assets/images/demo-three/posts/img-09.jpg" alt="Hidden Gems: Underrated Travel Destinations Around the World" data-uc-img="loading: lazy">
+                                                                </div>
+                                                                <a href="{% url 'blog_details' %}" class="position-cover"></a>
+                                                            </div>
+                                                            <div class="post-header panel vstack gap-narrow">
+                                                                <div class="post-meta panel hstack justify-start gap-1 fs-7 ft-tertiary fw-medium text-gray-900 dark:text-white text-opacity-60 d-none md:d-flex z-1">
+                                                                    <div>
+                                                                        <div class="post-category hstack gap-narrow fw-semibold">
+                                                                            <a class="fw-medium text-none text-primary dark:text-primary-400" href="{% url 'blog_category' %}">AI Powered</a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="sep d-none md:d-block">|</div>
+                                                                    <div class="d-none md:d-block">
+                                                                        <div class="post-date hstack gap-narrow">
+                                                                            <span>23d ago</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <h3 class="post-title h6 m-0 text-truncate-2">
+                                                                    <a class="text-none hover:text-primary duration-150" href="{% url 'blog_details' %}">Hidden Gems: Underrated Travel Destinations Around the World</a>
+                                                                </h3>
+                                                            </div>
+                                                        </article>
+                                                    </div>
+                                                    <div>
+                                                        <article class="post type-post panel vstack gap-1">
+                                                            <div class="post-media panel overflow-hidden">
+                                                                <div class="featured-image bg-gray-25 dark:bg-gray-800 ratio ratio-16x9">
+                                                                    <img class="media-cover image" src="/assets/images/common/img-fallback.png" data-src="{{MEDIA_URL}}assets/images/demo-three/posts/img-10.jpg" alt="Eco-Tourism: Traveling Responsibly and Sustainably" data-uc-img="loading: lazy">
+                                                                </div>
+                                                                <a href="{% url 'blog_details' %}" class="position-cover"></a>
+                                                            </div>
+                                                            <div class="post-header panel vstack gap-narrow">
+                                                                <div class="post-meta panel hstack justify-start gap-1 fs-7 ft-tertiary fw-medium text-gray-900 dark:text-white text-opacity-60 d-none md:d-flex z-1">
+                                                                    <div>
+                                                                        <div class="post-category hstack gap-narrow fw-semibold">
+                                                                            <a class="fw-medium text-none text-primary dark:text-primary-400" href="{% url 'blog_category' %}">Trips</a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="sep d-none md:d-block">|</div>
+                                                                    <div class="d-none md:d-block">
+                                                                        <div class="post-date hstack gap-narrow">
+                                                                            <span>29d ago</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <h3 class="post-title h6 m-0 text-truncate-2">
+                                                                    <a class="text-none hover:text-primary duration-150" href="{% url 'blog_details' %}">Eco-Tourism: Traveling Responsibly and Sustainably</a>
+                                                                </h3>
+                                                            </div>
+                                                        </article>
+                                                    </div>
+                                                    <div>
+                                                        <article class="post type-post panel vstack gap-1">
+                                                            <div class="post-media panel overflow-hidden">
+                                                                <div class="featured-image bg-gray-25 dark:bg-gray-800 ratio ratio-16x9">
+                                                                    <img class="media-cover image" src="/assets/images/common/img-fallback.png" data-src="{{MEDIA_URL}}assets/images/demo-three/posts/img-11.jpg" alt="Solo Travel: Some Tips and Destinations for the Adventurous Explorer" data-uc-img="loading: lazy">
+                                                                </div>
+                                                                <a href="{% url 'blog_details' %}" class="position-cover"></a>
+                                                            </div>
+                                                            <div class="post-header panel vstack gap-narrow">
+                                                                <div class="post-meta panel hstack justify-start gap-1 fs-7 ft-tertiary fw-medium text-gray-900 dark:text-white text-opacity-60 d-none md:d-flex z-1">
+                                                                    <div>
+                                                                        <div class="post-category hstack gap-narrow fw-semibold">
+                                                                            <a class="fw-medium text-none text-primary dark:text-primary-400" href="{% url 'blog_category' %}">Travel</a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="sep d-none md:d-block">|</div>
+                                                                    <div class="d-none md:d-block">
+                                                                        <div class="post-date hstack gap-narrow">
+                                                                            <span>2mo ago</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <h3 class="post-title h6 m-0 text-truncate-2">
+                                                                    <a class="text-none hover:text-primary duration-150" href="{% url 'blog_details' %}">Solo Travel: Some Tips and Destinations for the Adventurous Explorer</a>
+                                                                </h3>
+                                                            </div>
+                                                        </article>
+                                                    </div>
+                                                    <div>
+                                                        <article class="post type-post panel vstack gap-1">
+                                                            <div class="post-media panel overflow-hidden">
+                                                                <div class="featured-image bg-gray-25 dark:bg-gray-800 ratio ratio-16x9">
+                                                                    <img class="media-cover image" src="/assets/images/common/img-fallback.png" data-src="{{MEDIA_URL}}assets/images/demo-three/posts/img-12.jpg" alt="AI-Powered Financial Planning: How Algorithms Revolutionizing" data-uc-img="loading: lazy">
+                                                                </div>
+                                                                <a href="{% url 'blog_details' %}" class="position-cover"></a>
+                                                            </div>
+                                                            <div class="post-header panel vstack gap-narrow">
+                                                                <div class="post-meta panel hstack justify-start gap-1 fs-7 ft-tertiary fw-medium text-gray-900 dark:text-white text-opacity-60 d-none md:d-flex z-1">
+                                                                    <div>
+                                                                        <div class="post-category hstack gap-narrow fw-semibold">
+                                                                            <a class="fw-medium text-none text-primary dark:text-primary-400" href="{% url 'blog_category' %}">Tech</a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="sep d-none md:d-block">|</div>
+                                                                    <div class="d-none md:d-block">
+                                                                        <div class="post-date hstack gap-narrow">
+                                                                            <span>2mo ago</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <h3 class="post-title h6 m-0 text-truncate-2">
+                                                                    <a class="text-none hover:text-primary duration-150" href="{% url 'blog_details' %}">AI-Powered Financial Planning: How Algorithms Revolutionizing</a>
+                                                                </h3>
+                                                            </div>
+                                                        </article>
+                                                    </div>
+                                                </div>
+                                                <div class="row child-cols g-2">
+                                                    <div>
+                                                        <article class="post type-post panel vstack gap-1">
+                                                            <div class="post-media panel overflow-hidden">
+                                                                <div class="featured-image bg-gray-25 dark:bg-gray-800 ratio ratio-16x9">
+                                                                    <img class="media-cover image" src="/assets/images/common/img-fallback.png" data-src="{{MEDIA_URL}}assets/images/demo-three/posts/img-03.jpg" alt="Balancing Work and Wellness: Tech Solutions for Healthy" data-uc-img="loading: lazy">
+                                                                </div>
+                                                                <a href="{% url 'blog_details' %}" class="position-cover"></a>
+                                                            </div>
+                                                            <div class="post-header panel vstack gap-narrow">
+                                                                <div class="post-meta panel hstack justify-start gap-1 fs-7 ft-tertiary fw-medium text-gray-900 dark:text-white text-opacity-60 d-none md:d-flex z-1">
+                                                                    <div>
+                                                                        <div class="post-category hstack gap-narrow fw-semibold">
+                                                                            <a class="fw-medium text-none text-primary dark:text-primary-400" href="{% url 'blog_category' %}">Gadgets</a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="sep d-none md:d-block">|</div>
+                                                                    <div class="d-none md:d-block">
+                                                                        <div class="post-date hstack gap-narrow">
+                                                                            <span>1h ago</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <h3 class="post-title h6 m-0 text-truncate-2">
+                                                                    <a class="text-none hover:text-primary duration-150" href="{% url 'blog_details' %}">Balancing Work and Wellness: Tech Solutions for Healthy</a>
+                                                                </h3>
+                                                            </div>
+                                                        </article>
+                                                    </div>
+                                                    <div>
+                                                        <article class="post type-post panel vstack gap-1">
+                                                            <div class="post-media panel overflow-hidden">
+                                                                <div class="featured-image bg-gray-25 dark:bg-gray-800 ratio ratio-16x9">
+                                                                    <img class="media-cover image" src="/assets/images/common/img-fallback.png" data-src="{{MEDIA_URL}}assets/images/demo-three/posts/img-04.jpg" alt="The Importance of Sleep: Tips for Better Rest and Recovery" data-uc-img="loading: lazy">
+                                                                </div>
+                                                                <a href="{% url 'blog_details' %}" class="position-cover"></a>
+                                                            </div>
+                                                            <div class="post-header panel vstack gap-narrow">
+                                                                <div class="post-meta panel hstack justify-start gap-1 fs-7 ft-tertiary fw-medium text-gray-900 dark:text-white text-opacity-60 d-none md:d-flex z-1">
+                                                                    <div>
+                                                                        <div class="post-category hstack gap-narrow fw-semibold">
+                                                                            <a class="fw-medium text-none text-primary dark:text-primary-400" href="{% url 'blog_category' %}">AI Powered</a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="sep d-none md:d-block">|</div>
+                                                                    <div class="d-none md:d-block">
+                                                                        <div class="post-date hstack gap-narrow">
+                                                                            <span>2h ago</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <h3 class="post-title h6 m-0 text-truncate-2">
+                                                                    <a class="text-none hover:text-primary duration-150" href="{% url 'blog_details' %}">The Importance of Sleep: Tips for Better Rest and Recovery</a>
+                                                                </h3>
+                                                            </div>
+                                                        </article>
+                                                    </div>
+                                                    <div>
+                                                        <article class="post type-post panel vstack gap-1">
+                                                            <div class="post-media panel overflow-hidden">
+                                                                <div class="featured-image bg-gray-25 dark:bg-gray-800 ratio ratio-16x9">
+                                                                    <img class="media-cover image" src="/assets/images/common/img-fallback.png" data-src="{{MEDIA_URL}}assets/images/demo-three/posts/img-05.jpg" alt="The Future of Sustainable Living: Driving Eco-Friendly Lifestyles" data-uc-img="loading: lazy">
+                                                                </div>
+                                                                <a href="{% url 'blog_details' %}" class="position-cover"></a>
+                                                            </div>
+                                                            <div class="post-header panel vstack gap-narrow">
+                                                                <div class="post-meta panel hstack justify-start gap-1 fs-7 ft-tertiary fw-medium text-gray-900 dark:text-white text-opacity-60 d-none md:d-flex z-1">
+                                                                    <div>
+                                                                        <div class="post-category hstack gap-narrow fw-semibold">
+                                                                            <a class="fw-medium text-none text-primary dark:text-primary-400" href="{% url 'blog_category' %}">AI Powered</a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="sep d-none md:d-block">|</div>
+                                                                    <div class="d-none md:d-block">
+                                                                        <div class="post-date hstack gap-narrow">
+                                                                            <span>12h ago</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <h3 class="post-title h6 m-0 text-truncate-2">
+                                                                    <a class="text-none hover:text-primary duration-150" href="{% url 'blog_details' %}">The Future of Sustainable Living: Driving Eco-Friendly Lifestyles</a>
+                                                                </h3>
+                                                            </div>
+                                                        </article>
+                                                    </div>
+                                                    <div>
+                                                        <article class="post type-post panel vstack gap-1">
+                                                            <div class="post-media panel overflow-hidden">
+                                                                <div class="featured-image bg-gray-25 dark:bg-gray-800 ratio ratio-16x9">
+                                                                    <img class="media-cover image" src="/assets/images/common/img-fallback.png" data-src="{{MEDIA_URL}}assets/images/demo-three/posts/img-06.jpg" alt="Business Agility the Digital Age: Leveraging AI and Automation" data-uc-img="loading: lazy">
+                                                                </div>
+                                                                <a href="{% url 'blog_details' %}" class="position-cover"></a>
+                                                            </div>
+                                                            <div class="post-header panel vstack gap-narrow">
+                                                                <div class="post-meta panel hstack justify-start gap-1 fs-7 ft-tertiary fw-medium text-gray-900 dark:text-white text-opacity-60 d-none md:d-flex z-1">
+                                                                    <div>
+                                                                        <div class="post-category hstack gap-narrow fw-semibold">
+                                                                            <a class="fw-medium text-none text-primary dark:text-primary-400" href="{% url 'blog_category' %}">Tech</a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="sep d-none md:d-block">|</div>
+                                                                    <div class="d-none md:d-block">
+                                                                        <div class="post-date hstack gap-narrow">
+                                                                            <span>7d ago</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <h3 class="post-title h6 m-0 text-truncate-2">
+                                                                    <a class="text-none hover:text-primary duration-150" href="{% url 'blog_details' %}">Business Agility the Digital Age: Leveraging AI and Automation</a>
+                                                                </h3>
+                                                            </div>
+                                                        </article>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">Trending <span data-uc-navbar-parent-icon></span></a>
+                                <div class="uc-navbar-dropdown ft-primary text-unset p-3 pb-4 hide-scrollbar" data-uc-drop=" offset: 0; boundary: !.uc-navbar; stretch: x; animation: uc-animation-slide-top-small; duration: 150;">
+                                    <div class="row child-cols col-match g-2">
+                                        <div>
+                                            <article class="post type-post panel vstack gap-1">
+                                                <div class="post-media panel overflow-hidden">
+                                                    <div class="featured-image bg-gray-25 dark:bg-gray-800 ratio ratio-16x9">
+                                                        <img class="media-cover image" src="/assets/images/common/img-fallback.png" data-src="{{MEDIA_URL}}assets/images/demo-three/posts/img-01.jpg" alt="The Rise of AI-Powered Personal Assistants: How They Manage" data-uc-img="loading: lazy">
+                                                    </div>
+                                                    <a href="{% url 'blog_details' %}" class="position-cover"></a>
+                                                </div>
+                                                <div class="post-header panel vstack gap-narrow">
+                                                    <div class="post-meta panel hstack justify-start gap-1 fs-7 ft-tertiary fw-medium text-gray-900 dark:text-white text-opacity-60 d-none md:d-flex z-1">
+                                                        <div>
+                                                            <div class="post-category hstack gap-narrow fw-semibold">
+                                                                <a class="fw-medium text-none text-primary dark:text-primary-400" href="{% url 'blog_category' %}">Gadgets</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="sep d-none md:d-block">|</div>
+                                                        <div class="d-none md:d-block">
+                                                            <div class="post-date hstack gap-narrow">
+                                                                <span>1min ago</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <h3 class="post-title h6 m-0 text-truncate-2">
+                                                        <a class="text-none hover:text-primary duration-150" href="{% url 'blog_details' %}">The Rise of AI-Powered Personal Assistants: How They Manage</a>
+                                                    </h3>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <div>
+                                            <article class="post type-post panel vstack gap-1">
+                                                <div class="post-media panel overflow-hidden">
+                                                    <div class="featured-image bg-gray-25 dark:bg-gray-800 ratio ratio-16x9">
+                                                        <img class="media-cover image" src="/assets/images/common/img-fallback.png" data-src="{{MEDIA_URL}}assets/images/demo-three/posts/img-02.jpg" alt="Tech Innovations Reshaping the Retail Landscape: AI Payments" data-uc-img="loading: lazy">
+                                                    </div>
+                                                    <a href="{% url 'blog_details' %}" class="position-cover"></a>
+                                                </div>
+                                                <div class="post-header panel vstack gap-narrow">
+                                                    <div class="post-meta panel hstack justify-start gap-1 fs-7 ft-tertiary fw-medium text-gray-900 dark:text-white text-opacity-60 d-none md:d-flex z-1">
+                                                        <div>
+                                                            <div class="post-category hstack gap-narrow fw-semibold">
+                                                                <a class="fw-medium text-none text-primary dark:text-primary-400" href="{% url 'blog_category' %}">Startups</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="sep d-none md:d-block">|</div>
+                                                        <div class="d-none md:d-block">
+                                                            <div class="post-date hstack gap-narrow">
+                                                                <span>55min ago</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <h3 class="post-title h6 m-0 text-truncate-2">
+                                                        <a class="text-none hover:text-primary duration-150" href="{% url 'blog_details' %}">Tech Innovations Reshaping the Retail Landscape: AI Payments</a>
+                                                    </h3>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <div>
+                                            <article class="post type-post panel vstack gap-1">
+                                                <div class="post-media panel overflow-hidden">
+                                                    <div class="featured-image bg-gray-25 dark:bg-gray-800 ratio ratio-16x9">
+                                                        <img class="media-cover image" src="/assets/images/common/img-fallback.png" data-src="{{MEDIA_URL}}assets/images/demo-three/posts/img-03.jpg" alt="Balancing Work and Wellness: Tech Solutions for Healthy" data-uc-img="loading: lazy">
+                                                    </div>
+                                                    <a href="{% url 'blog_details' %}" class="position-cover"></a>
+                                                </div>
+                                                <div class="post-header panel vstack gap-narrow">
+                                                    <div class="post-meta panel hstack justify-start gap-1 fs-7 ft-tertiary fw-medium text-gray-900 dark:text-white text-opacity-60 d-none md:d-flex z-1">
+                                                        <div>
+                                                            <div class="post-category hstack gap-narrow fw-semibold">
+                                                                <a class="fw-medium text-none text-primary dark:text-primary-400" href="{% url 'blog_category' %}">Gadgets</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="sep d-none md:d-block">|</div>
+                                                        <div class="d-none md:d-block">
+                                                            <div class="post-date hstack gap-narrow">
+                                                                <span>1h ago</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <h3 class="post-title h6 m-0 text-truncate-2">
+                                                        <a class="text-none hover:text-primary duration-150" href="{% url 'blog_details' %}">Balancing Work and Wellness: Tech Solutions for Healthy</a>
+                                                    </h3>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <div>
+                                            <article class="post type-post panel vstack gap-1">
+                                                <div class="post-media panel overflow-hidden">
+                                                    <div class="featured-image bg-gray-25 dark:bg-gray-800 ratio ratio-16x9">
+                                                        <img class="media-cover image" src="/assets/images/common/img-fallback.png" data-src="{{MEDIA_URL}}assets/images/demo-three/posts/img-04.jpg" alt="The Importance of Sleep: Tips for Better Rest and Recovery" data-uc-img="loading: lazy">
+                                                    </div>
+                                                    <a href="{% url 'blog_details' %}" class="position-cover"></a>
+                                                </div>
+                                                <div class="post-header panel vstack gap-narrow">
+                                                    <div class="post-meta panel hstack justify-start gap-1 fs-7 ft-tertiary fw-medium text-gray-900 dark:text-white text-opacity-60 d-none md:d-flex z-1">
+                                                        <div>
+                                                            <div class="post-category hstack gap-narrow fw-semibold">
+                                                                <a class="fw-medium text-none text-primary dark:text-primary-400" href="{% url 'blog_category' %}">AI Powered</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="sep d-none md:d-block">|</div>
+                                                        <div class="d-none md:d-block">
+                                                            <div class="post-date hstack gap-narrow">
+                                                                <span>2h ago</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <h3 class="post-title h6 m-0 text-truncate-2">
+                                                        <a class="text-none hover:text-primary duration-150" href="{% url 'blog_details' %}">The Importance of Sleep: Tips for Better Rest and Recovery</a>
+                                                    </h3>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <div>
+                                            <article class="post type-post panel vstack gap-1">
+                                                <div class="post-media panel overflow-hidden">
+                                                    <div class="featured-image bg-gray-25 dark:bg-gray-800 ratio ratio-16x9">
+                                                        <img class="media-cover image" src="/assets/images/common/img-fallback.png" data-src="{{MEDIA_URL}}assets/images/demo-three/posts/img-05.jpg" alt="The Future of Sustainable Living: Driving Eco-Friendly Lifestyles" data-uc-img="loading: lazy">
+                                                    </div>
+                                                    <a href="{% url 'blog_details' %}" class="position-cover"></a>
+                                                </div>
+                                                <div class="post-header panel vstack gap-narrow">
+                                                    <div class="post-meta panel hstack justify-start gap-1 fs-7 ft-tertiary fw-medium text-gray-900 dark:text-white text-opacity-60 d-none md:d-flex z-1">
+                                                        <div>
+                                                            <div class="post-category hstack gap-narrow fw-semibold">
+                                                                <a class="fw-medium text-none text-primary dark:text-primary-400" href="{% url 'blog_category' %}">AI Powered</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="sep d-none md:d-block">|</div>
+                                                        <div class="d-none md:d-block">
+                                                            <div class="post-date hstack gap-narrow">
+                                                                <span>12h ago</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <h3 class="post-title h6 m-0 text-truncate-2">
+                                                        <a class="text-none hover:text-primary duration-150" href="{% url 'blog_details' %}">The Future of Sustainable Living: Driving Eco-Friendly Lifestyles</a>
+                                                    </h3>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="{% url 'blog_category' %}">News</a></li>
+                            <li><a href="{% url 'blog_category' %}">Tech</a></li>
+                            <li><a href="{% url 'blog_category' %}">Sciense</a></li>
+                            <li><a href="{% url 'blog_create' %}">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="uc-navbar-center">
+                        <div class="uc-logo d-block md:d-none text-dark dark:text-white">
+                            <a href="index-2.html">
+                                <img class="w-80px text-dark dark:text-white" src="https://html.themewant.com/news5/assets/images/demo-three/common/logo.svg" alt="News5" data-uc-svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="uc-navbar-right">
+                        <div class="uc-navbar-item">
+                            <a class="uc-cart-trigger position-relative btn btn-sm border-0 p-0 gap-narrow duration-0 dark:text-white" href="#uc-cart-panel" data-uc-toggle>
+                                <i class="icon icon-3 unicon-shopping-basket"></i>
+                                <span class="position-absolute top-50 start-50 translate-middle cstack w-20px h-20px" style="font-size: 12px; margin-top: 2px">0</span>
+                            </a>
+                        </div>
+                        {% if user.is_authenticated %}
+                        <a href="/logout" class="btn btn-sm btn-alt-danger bg-transparent text-gray-900 dark:text-white border shadow-xs text-none d-none lg:d-inline-flex">
+                            <i class="icon icon-narrow unicon-user-filled"></i>
+                            <span>Logout</span>
+                        </a>
+                        {% else %}
+                        <button type="button" class="btn btn-sm btn-alt-primary bg-transparent text-gray-900 dark:text-white border shadow-xs text-none d-none lg:d-inline-flex" data-uc-toggle="target: #uc-account-modal">
+                            <i class="icon icon-narrow unicon-user-filled"></i>
+                            <span>Sign in</span>
+                        </button>
+                        {% endif %}
+                        <div class="uc-navbar-item">
+                            <div class="uc-modes-trigger icon-2 text-dark dark:text-white" data-darkmode-toggle="">
+                                <label class="switch">
+                                    <span class="sr-only">Dark mode toggle</span>
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

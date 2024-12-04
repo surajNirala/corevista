@@ -1,0 +1,31 @@
+{% comment %} Display non-field errors {% endcomment %}
+{% comment %} {% if form.non_field_errors %}
+    {% for error in form.non_field_errors %}
+        <div class="alert alert-danger">{{ error }}</div>
+    {% endfor %}
+{% endif %} {% endcomment %}
+
+{% comment %} Loop through all fields to display field-specific errors {% endcomment %}
+{% comment %} {% for field in form %}
+    {% for error in field.errors %}
+        <div class="alert alert-danger">{{ error }}</div>
+    {% endfor %}
+{% endfor %} {% endcomment %}
+
+{% comment %} Display messages framework messages {% endcomment %}
+{% comment %} {% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-danger">{{ message }}</div>
+    {% endfor %}
+{% endif %} {% endcomment %}
+
+{% comment %} Display form-wide errors in a single block {% endcomment %}
+{% if form.errors %}
+    <div class="alert alert-danger">
+        <ul>
+            {% for field, errors in form.errors.items %}
+                <li><strong>{{ field }}:</strong> {{ errors|join:", " }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %} 
