@@ -21,7 +21,8 @@ class BlogCategory(models.Model):
 class Blog(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
     category = models.ForeignKey(BlogCategory,on_delete=models.CASCADE)
-    title = models.TextField(max_length=240,default="",unique=True)
+    # title = models.CharField(max_length=240,default="",unique=True)
+    title = models.CharField(max_length=240,default="",unique=True)
     slug = models.SlugField(unique=True, blank=True)  # Slug field
     summary = models.TextField(max_length=1000, blank=True, null=True)
     description = models.TextField()
@@ -32,6 +33,7 @@ class Blog(models.Model):
 
     class Meta:
         db_table ='blogs'
+        # indexes = [ models.Index(fields=['title'])]
     
     def save(self, *args, **kwargs):
         if not self.slug:  # If slug is empty, generate it
