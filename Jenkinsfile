@@ -51,7 +51,7 @@ pipeline {
                 }
             } 
         */
-        /* stage('Check Existing Container') {
+        stage('Check Existing Container') {
             steps {
                 script {
                     echo "Checking if the container already exists"
@@ -62,7 +62,7 @@ pipeline {
                     }
                 }
             }
-        } */
+        }
 
         stage('Build Docker Image') {
             steps {
@@ -113,14 +113,14 @@ pipeline {
                                 # docker rm -f ${CONTAINER_NAME}-${HOST_PORT} || true
 
                                 # Stop and remove existing container
-                                if docker ps -a --filter "name=${CONTAINER_NAME}-${HOST_PORT}" -q; then
-                                    echo "Stopping and removing the existing container"
-                                    # docker rm -f ${CONTAINER_NAME}-${HOST_PORT}
-                                    docker rm -f ${CONTAINER_NAME}-${env.HOST_PORT}
-                                    echo "${CONTAINER_NAME}==============${env.HOST_PORT}-----------------${HOST_PORT}"
-                                else
-                                    echo "No existing container found."
-                                fi
+                                #if docker ps -a --filter "name=${CONTAINER_NAME}-${HOST_PORT}" -q; then
+                                #    echo "Stopping and removing the existing container"
+                                #    # docker rm -f ${CONTAINER_NAME}-${HOST_PORT}
+                                #    docker rm -f ${CONTAINER_NAME}-${env.HOST_PORT}
+                                #    echo "${CONTAINER_NAME}==============${env.HOST_PORT}-----------------${HOST_PORT}"
+                                #else
+                                #    echo "No existing container found."
+                                #fi
 
                                 echo "Running the Docker container"
 
