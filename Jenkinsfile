@@ -109,14 +109,12 @@ pipeline {
                                 echo "Pulling Docker image from DockerHub: ${DOCKER_IMAGE_TAG}"
                                 docker pull ${DOCKER_IMAGE_TAG}
 
-                                # echo "Stopping and removing any existing container"
-                                # docker rm -f ${CONTAINER_NAME}-${HOST_PORT} || true
+                                echo "Stopping and removing any existing container"
+                                docker rm -f ${CONTAINER_NAME}-${HOST_PORT} || true
 
-                                # Stop and remove existing container
-                                # Check and stop/remove the existing container
-                                existing_container=$(docker ps -a --filter "name=${CONTAINER_NAME}-${HOST_PORT}" -q)
-                                if [ -n "$existing_container" ]; then
-                                    echo "Stopping and removing the existing container: ${CONTAINER_NAME}-${HOST_PORT}"
+                                 # Stop and remove existing container
+                                if docker ps -a --filter "name=${CONTAINER_NAME}-${HOST_PORT}" -q; then
+                                    echo "Stopping and removing the existing container"
                                     docker rm -f ${CONTAINER_NAME}-${HOST_PORT} || { echo "Failed to remove container"; exit 1; }
                                 else
                                     echo "No existing container found."
