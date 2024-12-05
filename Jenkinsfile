@@ -51,7 +51,7 @@ pipeline {
                 }
             } 
         */
-        stage('Check Existing Container') {
+        /* stage('Check Existing Container') {
             steps {
                 script {
                     echo "Checking if the container already exists"
@@ -62,7 +62,7 @@ pipeline {
                     }
                 }
             }
-        }
+        } */
 
         stage('Build Docker Image') {
             steps {
@@ -121,7 +121,7 @@ pipeline {
                                 fi
 
                                 echo "Running the Docker container"
-
+                                
                                 docker run -d --init -p ${HOST_PORT}:${CONTAINER_PORT} -v ${DATABASE_VOLUME} --name ${CONTAINER_NAME}-${HOST_PORT} ${DOCKER_IMAGE_TAG}
                                 
                                 echo "Docker image ${DOCKER_IMAGE_TAG} run successfully."

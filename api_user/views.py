@@ -61,7 +61,7 @@ def userList(request):
     # Prepare the response
     response = {
         "code": 200,
-        "message": "Fetched User List",
+        "message": "Fetched User List.",
         "data": data,
     }
 
