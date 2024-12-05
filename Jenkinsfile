@@ -109,8 +109,16 @@ pipeline {
                                 echo "Pulling Docker image from DockerHub: ${DOCKER_IMAGE_TAG}"
                                 docker pull ${DOCKER_IMAGE_TAG}
 
-                                echo "Stopping and removing any existing container"
-                                docker rm -f ${CONTAINER_NAME}-${HOST_PORT} || true
+                                # echo "Stopping and removing any existing container"
+                                # docker rm -f ${CONTAINER_NAME}-${HOST_PORT} || true
+
+                                # Stop and remove existing container
+                                if docker ps -a --filter "name=${CONTAINER_NAME}-${HOST_PORT}" -q; then
+                                    echo "Stopping and removing the existing container"
+                                    docker rm -f ${CONTAINER_NAME}-${HOST_PORT}
+                                else
+                                    echo "No existing container found."
+                                fi
 
                                 echo "Running the Docker container"
 
