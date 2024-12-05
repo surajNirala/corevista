@@ -51,7 +51,7 @@ pipeline {
                 }
             } 
         */
-        /* stage('Check Existing Container') {
+        stage('Check Existing Container') {
             steps {
                 script {
                     echo "Checking if the container already exists"
@@ -62,7 +62,7 @@ pipeline {
                     }
                 }
             }
-        } */
+        }
 
         stage('Build Docker Image') {
             steps {
