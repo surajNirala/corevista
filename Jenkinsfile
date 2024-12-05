@@ -103,14 +103,16 @@ pipeline {
                                 ssh -o StrictHostKeyChecking=no srj@${GOLANG_SERVER} <<EOF
                                 echo "Remote server connected successfully!"
 
-                                # Docker login
                                 echo "Logging into DockerHub"
-                                echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin || { echo "Docker login failed"; exit 1; }
+                                echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
-                                # Pull the latest image if not available locally
                                 echo "Pulling Docker image from DockerHub: ${DOCKER_IMAGE_TAG}"
                                 docker pull ${DOCKER_IMAGE_TAG}
 
+                                # echo "Stopping and removing any existing container"
+                                # docker rm -f ${CONTAINER_NAME}-${HOST_PORT} || true
+
+                                # Stop and remove existing container
                                 # Check and stop/remove the existing container
                                 existing_container=$(docker ps -a --filter "name=${CONTAINER_NAME}-${HOST_PORT}" -q)
                                 if [ -n "$existing_container" ]; then
@@ -120,10 +122,10 @@ pipeline {
                                     echo "No existing container found."
                                 fi
 
-                                # Run the new Docker container on the same port
                                 echo "Running the Docker container"
-                                docker run -d --init -p ${HOST_PORT}:${CONTAINER_PORT} -v ${DATABASE_VOLUME} --name ${CONTAINER_NAME}-${HOST_PORT} ${DOCKER_IMAGE_TAG} || { echo "Failed to run the container"; exit 1; }
 
+                                docker run -d --init -p ${HOST_PORT}:${CONTAINER_PORT} -v ${DATABASE_VOLUME} --name ${CONTAINER_NAME}-${HOST_PORT} ${DOCKER_IMAGE_TAG}
+                                
                                 echo "Docker image ${DOCKER_IMAGE_TAG} run successfully."
                                 exit
                             """
