@@ -10,6 +10,7 @@ pipeline {
         CREDENTIALS_GOLANG_SERVER = 'credentials-golang-server'
         JENKINS_SERVER = '35.200.176.111'
         GOLANG_SERVER = '34.131.166.50'
+        DATABASE_VOLUME = '/home/srj/db/db.sqlite3:/app/db.sqlite3'
     }
 
     parameters {
@@ -113,7 +114,7 @@ pipeline {
 
                                 echo "Running the Docker container"
 
-                                docker run -d --init -p ${HOST_PORT}:${CONTAINER_PORT} --name ${CONTAINER_NAME}-${HOST_PORT} ${DOCKER_IMAGE_TAG}
+                                docker run -d --init -p ${HOST_PORT}:${CONTAINER_PORT} -v ${DATABASE_VOLUME} --name ${CONTAINER_NAME}-${HOST_PORT} ${DOCKER_IMAGE_TAG}
                                 
                                 echo "Docker image ${DOCKER_IMAGE_TAG} run successfully."
                                 exit
