@@ -10,7 +10,7 @@ pipeline {
         CREDENTIALS_GOLANG_SERVER = 'credentials-golang-server'
         JENKINS_SERVER = '35.200.176.111'
         GOLANG_SERVER = '34.131.166.50'
-        DATABASE_VOLUME = '/home/srj/db/db.sqlite3:/app/db.sqlite3'
+        DATABASE_VOLUME = '/home/srj/db/:/app/db' 
     }
 
     parameters {
