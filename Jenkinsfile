@@ -51,7 +51,7 @@ pipeline {
                 }
             } 
         */
-        stage('Check Existing Container') {
+        /* stage('Check Existing Container') {
             steps {
                 script {
                     echo "Checking if the container already exists"
@@ -62,7 +62,7 @@ pipeline {
                     }
                 }
             }
-        }
+        } */
 
         stage('Build Docker Image') {
             steps {
@@ -103,29 +103,31 @@ pipeline {
                                 ssh -o StrictHostKeyChecking=no srj@${GOLANG_SERVER} <<EOF
                                 echo "Remote server connected successfully!"
 
+                                # Docker login
                                 echo "Logging into DockerHub"
-                                echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+                                echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin || { echo "Docker login failed"; exit 1; }
 
-                                echo "Pulling Docker image from DockerHub: ${DOCKER_IMAGE_TAG}"
-                                docker pull ${DOCKER_IMAGE_TAG}
+                                # Pull the latest image if not available locally
+                                if ! docker image inspect ${DOCKER_IMAGE_TAG} > /dev/null 2>&1; then
+                                    echo "Image not found locally. Pulling image..."
+                                    docker pull ${DOCKER_IMAGE_TAG}
+                                else
+                                    echo "Image already exists locally."
+                                fi
 
-                                # echo "Stopping and removing any existing container"
-                                # docker rm -f ${CONTAINER_NAME}-${HOST_PORT} || true
+                                # Check and stop/remove the existing container
+                                existing_container=$(docker ps -a --filter "name=${CONTAINER_NAME}-${HOST_PORT}" -q)
+                                if [ -n "$existing_container" ]; then
+                                    echo "Stopping and removing the existing container: ${CONTAINER_NAME}-${HOST_PORT}"
+                                    docker rm -f ${CONTAINER_NAME}-${HOST_PORT} || { echo "Failed to remove container"; exit 1; }
+                                else
+                                    echo "No existing container found."
+                                fi
 
-                                # Stop and remove existing container
-                                #if docker ps -a --filter "name=${CONTAINER_NAME}-${HOST_PORT}" -q; then
-                                #    echo "Stopping and removing the existing container"
-                                #    # docker rm -f ${CONTAINER_NAME}-${HOST_PORT}
-                                #    docker rm -f ${CONTAINER_NAME}-${env.HOST_PORT}
-                                #    echo "${CONTAINER_NAME}==============${env.HOST_PORT}-----------------${HOST_PORT}"
-                                #else
-                                #    echo "No existing container found."
-                                #fi
-
+                                # Run the new Docker container on the same port
                                 echo "Running the Docker container"
+                                docker run -d --init -p ${HOST_PORT}:${CONTAINER_PORT} -v ${DATABASE_VOLUME} --name ${CONTAINER_NAME}-${HOST_PORT} ${DOCKER_IMAGE_TAG} || { echo "Failed to run the container"; exit 1; }
 
-                                docker run -d --init -p ${HOST_PORT}:${CONTAINER_PORT} -v ${DATABASE_VOLUME} --name ${CONTAINER_NAME}-${HOST_PORT} ${DOCKER_IMAGE_TAG}
-                                
                                 echo "Docker image ${DOCKER_IMAGE_TAG} run successfully."
                                 exit
                             """
