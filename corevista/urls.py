@@ -13,4 +13,5 @@ urlpatterns = [
     path('accounts/login/', auth_views.LoginView.as_view(template_name='user/login.html'), name='login'),
     path('accounts/', include('django.contrib.auth.urls')),
     path('api/', include('api_blog.urls')),
+    path('api/', include('api_user.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
