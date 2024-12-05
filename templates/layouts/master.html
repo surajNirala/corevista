@@ -299,6 +299,7 @@
                             <div class="panel vstack justify-center items-center gap-2 sm:gap-4 text-center">
                                 <h4 class="h5 lg:h4 m-0">Log in</h4>
                                 <div class="panel vstack gap-2 w-100 sm:w-350px mx-auto">
+                                    {% include "common/message.html" %}
                                     <form class="vstack gap-2" method="post" action="/login/">
                                         {% csrf_token %}
                                         <input class="form-control form-control-sm h-40px w-full fs-6 bg-white dark:bg-gray-800 dark:bg-gray-800 dark:border-white dark:border-opacity-15 dark:border-opacity-15" name="username" type="username" placeholder="Your username" required>
