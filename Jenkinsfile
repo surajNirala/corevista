@@ -115,7 +115,9 @@ pipeline {
                                 # Stop and remove existing container
                                 if docker ps -a --filter "name=${CONTAINER_NAME}-${HOST_PORT}" -q; then
                                     echo "Stopping and removing the existing container"
-                                    docker rm -f ${CONTAINER_NAME}-${HOST_PORT}
+                                    # docker rm -f ${CONTAINER_NAME}-${HOST_PORT}
+                                    docker rm -f ${CONTAINER_NAME}-${env.HOST_PORT}
+                                    echo "${CONTAINER_NAME}==============${env.HOST_PORT}-----------------${HOST_PORT}"
                                 else
                                     echo "No existing container found."
                                 fi
