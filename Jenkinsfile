@@ -114,14 +114,14 @@ pipeline {
 
                                  # Stop and remove existing container
                                 if docker ps -a --filter "name=${CONTAINER_NAME}-${HOST_PORT}" -q; then
-                                    echo "Stopping and removing the existing container"
+                                    echo "Stopping and removing the existing container!!!!!"
                                     docker rm -f ${CONTAINER_NAME}-${HOST_PORT} || { echo "Failed to remove container"; exit 1; }
                                 else
                                     echo "No existing container found."
                                 fi
 
                                 echo "Running the Docker container"
-                                
+
                                 docker run -d --init -p ${HOST_PORT}:${CONTAINER_PORT} -v ${DATABASE_VOLUME} --name ${CONTAINER_NAME}-${HOST_PORT} ${DOCKER_IMAGE_TAG}
                                 
                                 echo "Docker image ${DOCKER_IMAGE_TAG} run successfully."
