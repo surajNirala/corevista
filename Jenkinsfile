@@ -108,12 +108,8 @@ pipeline {
                                 echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin || { echo "Docker login failed"; exit 1; }
 
                                 # Pull the latest image if not available locally
-                                if ! docker image inspect ${DOCKER_IMAGE_TAG} > /dev/null 2>&1; then
-                                    echo "Image not found locally. Pulling image..."
-                                    docker pull ${DOCKER_IMAGE_TAG}
-                                else
-                                    echo "Image already exists locally."
-                                fi
+                                echo "Pulling Docker image from DockerHub: ${DOCKER_IMAGE_TAG}"
+                                docker pull ${DOCKER_IMAGE_TAG}
 
                                 # Check and stop/remove the existing container
                                 existing_container=$(docker ps -a --filter "name=${CONTAINER_NAME}-${HOST_PORT}" -q)
