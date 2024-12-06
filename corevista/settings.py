@@ -31,14 +31,15 @@ SECRET_KEY = 'django-insecure-gvlc+!wabx*5xb_(hlua+1r*m)v$%8_k37ymhe#m5f+(7#vgd5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    '34.131.166.50', 
-    'localhost', 
-    '127.0.0.1', 
-    '0.0.0.0', 
-    'corevista.in', 
-    'www.corevista.in'
-]
+# ALLOWED_HOSTS = [
+#     '34.131.166.50', 
+#     'localhost', 
+#     '127.0.0.1', 
+#     '0.0.0.0', 
+#     'corevista.in', 
+#     'www.corevista.in'
+# ]
+ALLOWED_HOSTS = ['*']
 
 CSRF_TRUSTED_ORIGINS = [
     'https://corevista.in',
